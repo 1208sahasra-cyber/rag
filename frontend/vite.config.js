@@ -8,7 +8,7 @@ export default defineConfig({
     port: 5173,
     open: true,
     proxy: {
-      // Proxy API requests to backend (backend runs on port 5002)
+      // Proxy API requests to backend (for local development)
       '/api': {
         target: 'http://localhost:5002',
         changeOrigin: true,
@@ -18,5 +18,8 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+  },
+  define: {
+    __API_URL__: JSON.stringify(process.env.VITE_API_URL || 'http://localhost:5002'),
   },
 });
