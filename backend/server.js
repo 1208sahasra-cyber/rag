@@ -48,4 +48,8 @@ function startServer(port) {
   });
 }
 
-startServer(PORT);
+if (!process.env.VERCEL) {
+  startServer(PORT);
+}
+
+export default app;

@@ -4,6 +4,8 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import ChatWindow from './components/ChatWindow';
 
+axios.defaults.baseURL = import.meta.env.VITE_API_URL || '';
+
 export default function App() {
   const [sessions, setSessions] = useState([]);
   const [activeSessionId, setActiveSessionId] = useState(null);
