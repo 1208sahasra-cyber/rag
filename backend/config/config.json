@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "chromaHost": "http://localhost:8000",
+  "groqApiKey": "YOUR_GROQ_API_KEY"
+}
