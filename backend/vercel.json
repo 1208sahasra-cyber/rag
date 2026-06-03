@@ -11,13 +11,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "env": {
-    "PORT": "5002",
-    "GROQ_API_KEY": "@GROQ_API_KEY",
-    "CHROMA_HOST": "@CHROMA_HOST",
-    "CHROMA_API_KEY": "@CHROMA_API_KEY",
-    "CHROMA_TENANT": "@CHROMA_TENANT",
-    "CHROMA_DATABASE": "@CHROMA_DATABASE"
-  }
+  ]
 }
