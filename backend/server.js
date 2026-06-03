@@ -26,6 +26,22 @@ app.use("/api/dashboard", dashboardRouter);
 app.use("/api/feedback", feedbackRouter);
 app.use("/api/ping", pingRouter);
 
+app.get("/", (req, res) => {
+  res.json({
+    name: "Recall-GPT Backend",
+    status: "ok",
+    message: "Backend API is running. Use the frontend URL to open the app.",
+    frontend: "https://recall-gpt-frontend.vercel.app",
+    endpoints: {
+      health: "/api/health",
+      dashboard: "/api/dashboard",
+      chat: "/api/chat",
+      reindex: "/api/reindex",
+      feedback: "/api/feedback"
+    }
+  });
+});
+
 // Health check
 app.get("/api/health", (req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
